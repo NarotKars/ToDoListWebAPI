@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ToDoList.Models;
@@ -36,24 +34,48 @@ namespace ToDoList.Controllers
         }
 
         [HttpPost]
-        public void Post(ToDo td)
+        public ActionResult Post(ToDo td)
         {
-            ToDoDAL tddal = new ToDoDAL();
-            tddal.InsertToDo(td);
+            try
+            {
+                ToDoDAL tddal = new ToDoDAL();
+                tddal.InsertToDo(td);
+            }
+            catch
+            {
+                return BadRequest("something went wrong");
+            }
+            return Ok();
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int id)
         {
-            ToDoDAL tddal = new ToDoDAL();
-            tddal.DeleteToDo(id);
+            try
+            {
+                ToDoDAL tddal = new ToDoDAL();
+                tddal.DeleteToDo(id);
+            }
+            catch
+            {
+                return BadRequest("somthing went wrong");
+            }
+            return Ok();
         }
 
         [HttpPut]
-        public void Update([FromBody]ToDo td)
+        public ActionResult Update([FromBody]ToDo td)
         {
-            ToDoDAL tddal = new ToDoDAL();
-            tddal.updateToDo(td);
+            try
+            {
+                ToDoDAL tddal = new ToDoDAL();
+                tddal.updateToDo(td);
+            }
+            catch
+            {
+                return BadRequest("something went wrong");
+            }
+            return Ok();
         }
     }
 }

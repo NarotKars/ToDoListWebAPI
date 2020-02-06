@@ -9570,11 +9570,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Narode\\Desktop\\ToDoList\\ToDoList.csproj",
+      "projectUniqueName": "C:\\Users\\Narode\\Desktop\\WebAPI\\ToDoList.csproj",
       "projectName": "ToDoList",
-      "projectPath": "C:\\Users\\Narode\\Desktop\\ToDoList\\ToDoList.csproj",
+      "projectPath": "C:\\Users\\Narode\\Desktop\\WebAPI\\ToDoList.csproj",
       "packagesPath": "C:\\Users\\Narode\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Narode\\Desktop\\ToDoList\\obj\\",
+      "outputPath": "C:\\Users\\Narode\\Desktop\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
